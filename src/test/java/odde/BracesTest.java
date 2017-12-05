@@ -7,7 +7,9 @@ import static org.junit.Assert.*;
 
 public class BracesTest {
     @Test
-    public void curlyBraces() { assertTrue(isValid("{}")); }
+    public void curlyBraces() {
+        assertTrue(isValid("{}"));
+    }
 
     @Test
     public void onlyOpenBrace() {
@@ -15,12 +17,18 @@ public class BracesTest {
     }
 
     @Test
-    public void roundBraces() { assertTrue(isValid("()")); }
+    public void roundBraces() {
+        assertTrue(isValid("()"));
+    }
 
     @Test
-    public void unacceptedBrace() { assertFalse(isValid("<>")); }
+    public void unacceptedBrace() {
+        assertFalse(isValid("<>"));
+    }
 
     @Test
-    public void multipleBraces() { assertTrue(isValid("{[[()]]}")); }
+    public void multipleBraces() {
+        assertTrue(isValid("{[[()]]}"));
+    }
 
 }
